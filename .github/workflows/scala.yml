@@ -16,4 +16,4 @@ jobs:
         with:
           java-version: 11
       - name: Run sbt build
-        run: sbt clean update compile test
+        run: sbt clean update scalafmtCheck compile test
