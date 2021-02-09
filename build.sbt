@@ -1,8 +1,8 @@
-ThisBuild / organization := "io.github.wlad031"
+ThisBuild / organization := "dev.vgerasimov"
 ThisBuild / version := "0.1.0-SNAPSHOT"
 ThisBuild / scalaVersion := "2.13.4"
 
-ThisBuild / idePackagePrefix := Some("io.github.wlad031.stf")
+ThisBuild / idePackagePrefix := Some("dev.vgerasimov.stf")
 
 ThisBuild / resolvers ++= Seq(
   "Typesafe".at("https://repo.typesafe.com/typesafe/releases/"),

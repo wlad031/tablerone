@@ -1,4 +1,4 @@
-package io.github.wlad031.stf
+package dev.vgerasimov.stf
 
 object Main {
   case class A(i: Int, s: String)

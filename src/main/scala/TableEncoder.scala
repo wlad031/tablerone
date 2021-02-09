@@ -1,4 +1,4 @@
-package io.github.wlad031.stf
+package dev.vgerasimov.stf
 
 import shapeless.labelled.FieldType
 import shapeless.{ ::, HList, HNil, LabelledGeneric, Witness }

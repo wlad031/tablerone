@@ -1,4 +1,4 @@
-package io.github.wlad031.stf
+package dev.vgerasimov.stf
 
 /** Structure containing 2D data with headers.
   *
