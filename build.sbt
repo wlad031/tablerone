@@ -1,44 +1,29 @@
-ThisBuild / organization := "dev.vgerasimov"
-ThisBuild / version := "0.1.0-SNAPSHOT"
-ThisBuild / scalaVersion := "2.13.4"
-
-ThisBuild / idePackagePrefix := Some("dev.vgerasimov.stf")
-
-ThisBuild / resolvers ++= Seq(
-  "Typesafe".at("https://repo.typesafe.com/typesafe/releases/"),
+resolvers ++= Seq(
+  "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots",
+  Resolver.githubPackages("wlad031")
 )
 
-ThisBuild / libraryDependencies ++= Seq(
-  Seq(
-    "com.chuusai" %% "shapeless" % "2.4.0-M1"
-  ),
-).flatten
+libraryDependencies ++= Seq(
+  "dev.vgerasimov" %% "shapelse" % "0.2.0"
+)
 
-ThisBuild / scalacOptions ++= Seq(
+scalacOptions ++= Seq(
   "-encoding",
   "utf8",
   "-Xlint:implicit-recursion",
   "-Xfatal-warnings",
   "-deprecation",
-  "-unchecked",
-  "-language:implicitConversions",
-  "-language:higherKinds",
-  "-language:existentials",
-  "-language:postfixOps"
+  "-unchecked"
 )
 
 lazy val root = project
   .in(file("."))
   .settings(
-    name := "scala-table-formatter",
-    assemblyJarName in assembly := "scala-table-formatter.jar"
+    name := "tablerone",
+    description := "",
+    version := "0.1.0",
+    scalaVersion := "2.13.5",
+    useScala3doc := true,
+    idePackagePrefix := Some("dev.vgerasimov.tablerone"),
   )
-
-Test / testOptions += Tests.Argument(
-  framework = Some(TestFrameworks.ScalaTest),
-  args = List("-oSD")
-)
-
-scalacOptions in (Compile, doc) ++= Seq(
-  "-groups"
-)
+  
